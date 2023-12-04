@@ -1,0 +1,126 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0;
+  height: 100%;
+  box-sizing: border-box;
+  transition: left 500ms;
+  z-index: 999;
+}
+.nav .header__top {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+.nav .header__top a {
+  font-size: 38px;
+  display: block;
+}
+.nav .header__gnb {
+  height: calc(100% - 84px);
+  overflow-y: auto;
+}
+.nav .header__gnb > li {
+  margin: 2px 0;
+  position: relative;
+}
+.nav .header__gnb > li.active:after {
+  content: "";
+  display: block;
+  height: 41px;
+  width: 4px;
+  background-color: darkcyan;
+  border-radius: 3px 0 0 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.nav .header__gnb > li.active .gnb__main {
+  background-color: #ddd;
+}
+.nav .header__gnb > li.active .gnb__main:hover {
+  background-color: #ddd;
+}
+.nav .header__gnb > li.active .gnb__sub-list {
+  display: block;
+}
+.nav .header__gnb > li .gnb__main {
+  display: block;
+  margin: 0 20px;
+  padding: 10px;
+  font-size: 15px;
+  width: 160px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.nav .header__gnb > li .gnb__main:hover {
+  background-color: #eee;
+}
+.nav .header__gnb > li .gnb__sub-list {
+  display: none;
+  overflow: hidden;
+}
+.nav .header__gnb > li .gnb__sub-list li a {
+  display: block;
+  margin: 0 20px;
+  padding: 10px 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+.nav .header__gnb > li .gnb__sub-list li a:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #999;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.nav .header__gnb > li .gnb__sub-list li a:hover {
+  background-color: #eee;
+}
+.nav .header__gnb > li .gnb__sub-list li .active:before {
+  width: 7px;
+  height: 7px;
+  background-color: darkcyan;
+  box-shadow: 0 0 8px 0 rgb(0, 139, 139);
+}
+.nav .header__btn-wrap {
+  position: absolute;
+  top: 34px;
+  right: -16px;
+  display: none;
+}
+.nav .header__btn-wrap .btn-wrap__exit {
+  display: block;
+  background-color: darkcyan;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.container-wrap {
+  width: calc(100vw - 22rem);
+  padding: 8rem 2rem 4rem;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    left: -25rem;
+  }
+  .nav .header__btn-wrap {
+    display: block;
+  }
+  .container-wrap {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
